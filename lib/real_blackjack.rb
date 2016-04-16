@@ -10,7 +10,6 @@ def deal_card
   rand(1..11)
 end
 
-
 def prompt_user
   puts "Type 'h' to hit or 's' to stay."
 end
@@ -24,10 +23,9 @@ def end_game(card_total)
 end
 
 def initial_round_player
-
-first = [nil, deal_card + deal_card]
-display_card_total(first)
-first
+  first = [nil, deal_card + deal_card]
+  display_card_total(first)
+  first
 end
 
 def initial_round_dealer
@@ -50,7 +48,7 @@ def hit?(num)
       elsif x == "h"
         array = ["h", num[1] + deal_card]
       end
- end
+end
 
 
 def dealer_hit?(num)
@@ -67,7 +65,7 @@ def hit_fixer(player_total)
         display_card_total(player_total)
       end
   end
-player_total
+  player_total
 end 
 
 
@@ -84,7 +82,7 @@ def logic(player_input, dealer_total)
       elsif dealer_total == player_input[1]
         puts "Well.. Would you look at that. It's a tie! #{dealer_total} each!"
       else 
-        puts "Houston - we have a problem dealer total: #{dealer_total} player input: #{player_input}"
+        puts "Houston - we have a problem! Dealer total: #{dealer_total} player input: #{player_input}"
       end
 end  
 
