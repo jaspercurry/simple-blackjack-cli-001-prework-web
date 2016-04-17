@@ -7,8 +7,25 @@ def display_card_total(x)
 end
 
 def deal_card
+  
+  hash = 
+    {
+      1 => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      2 => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      3 => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      4 => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    }
+  hash[rand(1..4)].shuffle!.pop
+end
+
+
+def deal_card_original
+  
+
+
   rand(1..11)
 end
+
 
 def prompt_user
   puts "Type 'h' to hit or 's' to stay."
